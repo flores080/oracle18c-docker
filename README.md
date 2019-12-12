@@ -1,6 +1,6 @@
 # Oracle 18c - Docker
 
-Install docker
+### Install docker
 
 ```bash
 # UPDATE
@@ -23,7 +23,7 @@ sudo service docker start
 sudo docker run hello-world
 ```
 
-Install Oracle DB
+### Install Oracle DB
 
 ```bash
 sudo docker pull dockerhelp/docker-oracle-ee-18c
@@ -47,4 +47,29 @@ SQL> create user TEST identified by 1234;
 SQL> grant dba to TEST;
 ```
 
+### Start Oracle DB image
+
+```bash
+sudo docker start [containerid]
+sudo docker exec -it [containerid] bash
+
+sh post_install.sh
+
+sqlplus
+
+test #user
+1234 #pwd
+
+
+#port 172.17.0.2
+#SID orcl18
+```
+
+
+
+
+
 https://soajp.blogspot.com/2019/03/instalar-oracle-database-18c-con-docker.html
+
+
+
